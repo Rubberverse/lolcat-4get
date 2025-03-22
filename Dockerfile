@@ -1,6 +1,6 @@
 # Based on qor-nginx project
 
-ARG IMAGE_REPOSITORY=public.ecr.aws/docker/library/
+ARG IMAGE_REPOSITORY=public.ecr.aws/docker/library
 ARG IMAGE_VERSION=bookworm-slim
 
 FROM $IMAGE_REPOSITORY/debian:$IMAGE_VERSION AS debian-base
