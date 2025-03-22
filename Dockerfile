@@ -54,6 +54,7 @@ RUN apt update \
         ${DEB}-imagick \
         ${DEB}-curl \
         ${DEB}-apcu \
+        ${DEB}-fpm \
     && mkdir -p \
         /app/run \
         /app/www \
