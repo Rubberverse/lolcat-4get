@@ -22,7 +22,7 @@ ENV DEB=$DEB \
 
 WORKDIR /app
 
-COPY --chmod=755 ./remove-junk.sh /app/scripts/remove-junk.sh
+COPY --chmod=755 /scripts/remove-junk.sh /app/scripts/remove-junk.sh
 
 RUN apt update \
     && apt upgrade -y \
@@ -77,10 +77,11 @@ RUN apt update \
     && /app/scripts/remove-junk.sh \
     && rm /app/scripts/remove-junk.sh
 
-COPY ./php.ini /app/configs/fpm/php.ini
-COPY ./fpm.conf /app/configs/fpm/php-fpm.conf
-COPY ./www.conf /app/configs/fpm/pool.d/www.conf
-COPY ./nginx.conf /app/configs/nginx/nginx.conf
+COPY /configs/php.ini /app/configs/fpm/php.ini
+COPY /configs/fpm.conf /app/configs/fpm/php-fpm.conf
+COPY /configs/www.conf /app/configs/fpm/pool.d/www.conf
+COPY /configs/nginx.conf /app/configs/nginx/nginx.conf
+COPY /configs/4get.conf /app/configs/nginx/sites-enabled/4get.conf
 
 WORKDIR /app/www/4get
 RUN chown -Rf $CONT_USER:$CONT_USER \
