@@ -88,7 +88,7 @@ RUN chown -Rf $CONT_USER:$CONT_USER \
     /app \
     /var/lib/nginx
 
-COPY --chmod=755 ./docker-entrypoint.sh /app/scripts/docker-entrypoint.sh
+COPY --chmod=755 /scripts/docker-entrypoint.sh /app/scripts/docker-entrypoint.sh
 
 WORKDIR /app
 USER $CONT_USER
