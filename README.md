@@ -1,6 +1,6 @@
 # Rubberverse Dockerfiles
 
-This is based off my rather abandoned [qor-nginx]() project so a lot of stuff been reused from it. If you want to customize it, git clone this repository and change files to your liking.
+This is based off my rather abandoned [qor-nginx](https://github.com/Rubberverse/qor-nginx) project so a lot of stuff been reused from it. If you want to customize it, git clone this repository and change files to your liking.
 
 ## What does it do?
 
